@@ -7,6 +7,12 @@ const initialState = {
 
 // Reducer
 const rootReducer = (state = initialState, action) => {
+    if (action.type === 'INC_COUNTER') {
+        return {
+            ...state,
+            counter: state.counter + 1,
+        };
+    }
     return state;
 };
 
