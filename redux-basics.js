@@ -1,10 +1,14 @@
 const redux = require('redux');
 const createStore = redux.createStore;
 
-// Store
-const store = createStore();
-
 // Reducer
+const rootReducer = (state, action) => {
+    return state;
+};
+
+// Store
+const store = createStore(rootReducer);
+console.log(store.getState());
 
 // Dispatching Actions
 
