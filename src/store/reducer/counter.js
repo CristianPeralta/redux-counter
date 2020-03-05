@@ -3,13 +3,10 @@ import {
     DECREMENT,
     ADD,
     SUBTRACT,
-    STORE_RESULT,
-    DELETE_RESULT,
 } from './actions';
 
 const initialState = {
-    counter: 0,
-    results: []
+    counter: 0
 };
 
 const reducer = (state = initialState, action) => {
@@ -35,21 +32,8 @@ const reducer = (state = initialState, action) => {
                 counter: state.counter - action.val,
             };
         }
-        case STORE_RESULT:{
-            return {
-                ...state,
-                results: state.results.concat({ id: new Date(), value: state.counter }),
-            };
-        }
-        case DELETE_RESULT:{
-            return {
-                ...state,
-                results: state.results.filter(result => result.id !== action.id),
-            };
-        }
-        default:
-            return state;
     }
+    return state;
 };
 
 export default reducer;
