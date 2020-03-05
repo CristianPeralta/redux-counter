@@ -3,7 +3,7 @@ import {
     DECREMENT,
     ADD,
     SUBTRACT,
-} from './actions';
+} from '../actions';
 
 const initialState = {
     counter: 0

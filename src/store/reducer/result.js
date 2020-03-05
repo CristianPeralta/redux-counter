@@ -1,7 +1,7 @@
 import {
     STORE_RESULT,
     DELETE_RESULT,
-} from './actions';
+} from '../actions';
 
 const initialState = {
     results: []
