@@ -3,6 +3,8 @@ import {
     DELETE_RESULT,
 } from '../actions/actionTypes';
 
+import { updateObject } from '../utility';
+
 const initialState = {
     results: []
 };
