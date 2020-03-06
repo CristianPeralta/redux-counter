@@ -60,29 +60,13 @@ const mapStateToProps = state => {
     };
 };
 
-/*
-const dispatch = (args) => {
-    ...(args);
-}
-*/
-
-const handstore = (result) => {
-    return action => {
-        console.log('action', action);
-        action({    
-            type: "STORE_RESULT",
-            result: result,
-        });
-    };
-};
-
 const mapDisptachToProps = dispatch => {
     return {
         onIncrementCounter: () => dispatch(increment()),
         onDerementCounter: () => dispatch(decrement()),
         onAddCounter: () => dispatch(add(10)),
         onSubtractCounter: () => dispatch(subtract(5)),
-        onStoreResult: result => dispatch(handstore(result)),
+        onStoreResult: result => dispatch(storeResult(result)),
         onDeleteResult: id => dispatch(deleteResult(id)),
     }
 }
